@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 int main(void){
    
@@ -11,18 +11,23 @@ int main(void){
         nome_cidade2[20];
 
     int 
-        populacao1, 
+       
         no_pontos_turisticos1,
-        populacao2,
-        no_pontos_turisticos2;   
+        no_pontos_turisticos2; 
 
     float 
+        populacao1, 
+        populacao2,
         area1,
         PIB1,
         area2,
-        PIB2;
+        PIB2,
+        Densidadepopulacional1,
+        Densidadepopulacional2,
+        pibpercapta1,
+        pibpercapta2;
 
-
+        
 
     printf("\n ---------------------------- \n");
     printf("carta 1: \n");
@@ -38,24 +43,32 @@ int main(void){
     scanf("%s", &nome_cidade1);
 
     printf("Digite a populacao: \n");
-    scanf("%d", &populacao1);
+    scanf("%f", &populacao1);
 
     printf("Digite a area: \n");
     scanf("%f", &area1);
 
+    Densidadepopulacional1 = populacao1/area1;
+
     printf("Digite o PIB: \n");
     scanf("%f", &PIB1);
+
+    pibpercapta1 = PIB1/populacao1;
 
     printf("Digite o numero de pontos turisticos: \n");
     scanf("%d", &no_pontos_turisticos1);
 
+    //printf("Nome do aluno: %s - Matricula: %d \n", nome, matricula); %.2f
+
     printf("carta: %s \n", codigo_carta1);
     printf("Estado: %s \n", estado1);
     printf("Cidade: %s \n", nome_cidade1); 
-    printf("Populacao: %u \n", populacao1);
+    printf("Populacao: %f \n", populacao1);
     printf("Area: %f \n", area1);
     printf("PIB: %f \n", PIB1);
-    printf("Qtde pontos turisticos: %d \n", no_pontos_turisticos1 );
+    printf("Qtde pontos turisticos: %d \n", no_pontos_turisticos1);
+    printf ("Densidade : %.2f\n", Densidadepopulacional1);
+    printf("PIB per capta: %.2f \n", pibpercapta1);
 
     printf("carta 2: \n");
 
@@ -70,13 +83,16 @@ int main(void){
     scanf("%s", &nome_cidade2);
 
     printf("Digite a populacao: \n");
-    scanf("%d", &populacao2);
+    scanf("%f", &populacao2);
 
     printf("Digite a area: \n");
     scanf("%f", &area2);
 
     printf("Digite o PIB: \n");
     scanf("%f", &PIB2);
+
+    Densidadepopulacional2 = populacao2/area2;
+    pibpercapta2 = PIB2/populacao2;
 
     printf("Digite o numero de pontos turisticos: \n");
     scanf("%d", &no_pontos_turisticos2);
@@ -88,10 +104,12 @@ int main(void){
     printf("carta: %s \n", codigo_carta1);
     printf("Estado: %s \n", estado1);
     printf("Cidade: %s \n", nome_cidade1); 
-    printf("Populacao: %d \n", populacao1);
-    printf("Area: %f \n", area1);
-    printf("PIB: %f \n", PIB1);
+    printf("Populacao: %.2f \n", populacao1);
+    printf("Area: %.2f \n", area1);
+    printf("PIB: %.2f \n", PIB1);
     printf("Qtde pontos turisticos: %d \n", no_pontos_turisticos1);
+    printf ("Densidade populacional %.2f \n", Densidadepopulacional1);
+    printf("PIB per capta %.2f \n", pibpercapta1);
 
     printf("\n ---------------------------- \n");
     printf("\n carta 2: \n");
@@ -99,10 +117,12 @@ int main(void){
     printf("carta: %s \n", codigo_carta2);
     printf("Estado: %s \n", estado2);
     printf("Cidade: %s \n", nome_cidade2);
-    printf("Populacao: %d \n", populacao2);
-    printf("Area: %f \n", area2);
-    printf("PIB: %f \n", PIB2);
+    printf("Populacao: %.2f \n", populacao2);
+    printf("Area: %.2f \n", area2);
+    printf("PIB: %.2f \n", PIB2);
     printf("Qtde pontos turisticos: %d \n", no_pontos_turisticos2);
+    printf ("Densidade populacional %2.f \n", Densidadepopulacional2);
+    printf("PIB per capta %2.f \n", pibpercapta2);
 
 
 
